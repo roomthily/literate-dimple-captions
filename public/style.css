@@ -6,13 +6,40 @@
 
 * {
   box-sizing: border-box;
+  position:absolute;
 }
 
 body {
   font-family: helvetica, arial, sans-serif;
-  margin: 10em;
+/*   margin: 5em; */
+}
+
+#stream {
+  visibility: hidden;
+  width: 800px;
+  height: 800px;
+  
+  top: 2em;
+  left: 2em;
+  
+  border: 2px solid #eee;
+  overflow-y:scroll;
+  
+  color: #EFEFEF;
+  background-color: #3F3F3F;
+}
+#stream span {
+  position:relative;
 }
 
 canvas {
   border: 2px solid #eee;
+  visibility: hidden;
+  top: 2em;
+  left: 2em;
+}
+
+#remix {
+  top: 95vh;
+  left: 3vw;
 }
