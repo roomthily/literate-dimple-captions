@@ -8,7 +8,11 @@ Uses the [opened-captions](https://github.com/slifty/opened-captions) module to 
 
 Uses [js-word-packing](https://github.com/seveibar/js-word-packing) for the visualization.
 
+Defaults to a stream with frequency flagged by color, but the bin packing view is available via 
 
+```
+https://literate-dimple.glitch.me/?viz=bin
+```
 
 
 

@@ -30,11 +30,18 @@ $(function() {
     $("canvas").css('visibility', 'visible');
   }
   
-  // 11 colors
+  // pick your color scheme, this is one of the
+  // colorbrewer2 schemes.
   var colors = chroma.brewer.YlGnBu;
   
   // streams the new text to the div. plain caption rendering of cspan.
   var socket = io();
+  
+  socket.on('sentiment', function(data) {
+    console.log('SENTIMENT!');
+    console.log(data);
+  })
+  
   socket.on('word', function(data) {
     // tidy up our word
     var word = data.data.body;
