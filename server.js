@@ -13,6 +13,7 @@ var io = require('socket.io')(server);
 var socket = require('socket.io-client')('https://literate-dimple.glitch.me');
 
 app.use(express.static('public'));
+app.use(express.static('views'));
 
 // http://expressjs.com/en/starter/basic-routing.html
 app.get("/", function (request, response) {
