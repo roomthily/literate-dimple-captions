@@ -43,3 +43,99 @@ canvas {
   top: 95vh;
   left: 3vw;
 }
+
+/** for the sentiment analysis page **/
+body.sentiment {
+  background:  rgba(193, 66, 66, 0.1);
+  width: 100vw;
+  height: 90vh;
+  font-family: 'Roboto Mono', monospace;
+}
+.sentiment h1 {
+  font-size: 1.2em;
+  letter-spacing: 0.2em;
+  padding:0;
+  margin: 1.6em 0 0.8em 1.6em;
+  position:relative;
+}
+.content {
+  width: 100%;
+  height: 100%;
+  margin: 1.6em;
+  margin-bottom: 3em;
+  padding: 1.6em;
+  
+  font-size: 0.8em;
+  line-height: 1.2em;
+  
+  display: flex;
+  flex-direction:column;
+  
+  overflow-y:scroll;
+}
+.chunk {
+  background-color: #fff;
+  width: max-content;
+  
+  position:relative;
+  margin-bottom: 1em;
+  padding: 1.2em;
+  
+  border-radius: 0 6px 6px 6px;
+}
+.neutral {
+  color: #8E8E8E;
+}
+.positive {
+  color: #08BD3C;
+}
+.negative {
+  color: #E00000;
+}
+.chunk:before {
+  position:absolute;
+  top: -12px;
+  left: -10px;
+  font-size: 1.4em;
+}
+.chunk.neutral:before {
+  content:'😐';
+}
+.chunk.positive:before {
+  content:'😀';
+}
+.chunk.negative:before {
+  content:'😟';
+}
+
+.waiting {
+  position:relative;
+  width: 3.4em;
+  height: 3.4em;
+  background: #fff;
+  border-radius: 6px;
+  margin-bottom: 1em;
+  animation: wait 5s ease-in infinite alternate-reverse; 
+}
+
+@keyframes wait {
+  0% {
+     width: 3.4em;
+  }
+  100% {
+     width: 10.4em;
+  }
+}
+
+.end-waiting {
+  animation: end-waiting 3s ease-in;
+}
+@keyframes end-waiting {
+  0% {
+    height: 3.4em;
+  }
+  100% {
+    width: 0%;
+    height: 0%;
+  }
+}

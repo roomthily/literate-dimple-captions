@@ -37,10 +37,10 @@ $(function() {
   // streams the new text to the div. plain caption rendering of cspan.
   var socket = io();
   
-  socket.on('sentiment', function(data) {
-    console.log('SENTIMENT!');
-    console.log(data);
-  })
+  // socket.on('sentiment', function(data) {
+  //   console.log('SENTIMENT!');
+  //   console.log(data);
+  // })
   
   socket.on('word', function(data) {
     // tidy up our word
